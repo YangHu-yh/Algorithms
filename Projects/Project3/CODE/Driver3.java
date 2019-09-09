@@ -21,7 +21,7 @@ public class Driver3{
         parseArgs(args);
         testRun();
         printOrSaveResult();
-    } 
+    }
 
     public static void parseArgs(String[] args) throws Exception{
         //Verify that there are either one or three inputs given
@@ -96,7 +96,9 @@ public class Driver3{
             selectedItems = program.maximizeSentimentalValue(weights, values, capacity);
         }
         else{
-            program.cleverWidthReduction(imageObject,desiredWidth);
+            ShrinkImage prog = new ShrinkImage();
+            prog.cleverWidthReduction(imageObject,desiredWidth);
+
         }
     }
 
